@@ -85,16 +85,17 @@ export function Projects() {
 
 								{/* Ikonice gore desno */}
 								<div className="flex items-center gap-3 text-muted-foreground">
-									{/* GitHub Link */}
-									<a
-										href={p.githubUrl}
-										target="_blank"
-										rel="noreferrer"
-										className="hover:text-primary transition-colors z-10"
-										aria-label="GitHub Repository"
-									>
-										<Github size={18} />
-									</a>
+									{p.githubUrl && (
+									    <a
+										    href={p.githubUrl}
+										    target="_blank"
+										    rel="noreferrer"
+										    className="hover:text-primary transition-colors z-10"
+										    aria-label="GitHub Repository"
+									    >
+										    <Github size={18} />
+									    </a>
+								    )}
 
 									{/* External Link (Prikazuje se SAMO ako postoji liveUrl) */}
 									{p.liveUrl && (
