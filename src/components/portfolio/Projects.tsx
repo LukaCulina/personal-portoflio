@@ -9,43 +9,47 @@ export function Projects() {
 		name: string;
 		descKey: TranslationKey;
 		tags: string[];
-		href: string;
+		githubUrl?: string;
+		liveUrl?: string;
 	}[] = [
 		{
 			name: "TrekTrip",
 			descKey: "proj_trek_desc",
 			tags: ["React", "Spring Boot", "REST"],
-			href: "https://github.com/LukaCulina/TrekTrip",
+			githubUrl: "https://github.com/LukaCulina/TrekTrip",
+			liveUrl: "https://trek-trip.vercel.app/",
 		},
 		{
 			name: "FilmStar",
 			descKey: "proj_film_desc",
 			tags: ["React", "API"],
-			href: "https://github.com/LukaCulina/FilmStar",
+			githubUrl: "https://github.com/LukaCulina/FilmStar",
+			liveUrl: "https://lukaculina.github.io/FilmStar/",
 		},
 		{
 			name: "Terraforming Mars",
 			descKey: "proj_tm_desc",
 			tags: ["Java", "JavaFX"],
-			href: "https://github.com/LukaCulina/Terraforming-Mars",
+			githubUrl: "https://github.com/LukaCulina/Terraforming-Mars",
 		},
 		{
 			name: "Pomodoro Timer",
 			descKey: "proj_pom_desc",
 			tags: ["JavaScript", "HTML", "CSS"],
-			href: "https://github.com/LukaCulina/Pomodoro",
+			githubUrl: "https://github.com/LukaCulina/Pomodoro",
+			liveUrl: "https://lukaculina.github.io/Pomodoro/",
 		},
 		{
 			name: "Snake Game",
 			descKey: "proj_snake_desc",
 			tags: ["JavaScript", "Canvas"],
-			href: "https://github.com/LukaCulina/Zmijica",
+			githubUrl: "https://github.com/LukaCulina/Zmijica",
+			liveUrl: "https://lukaculina.github.io/Zmijica/",
 		},
 		{
 			name: "Tech4Society",
 			descKey: "proj_tech_desc",
 			tags: ["Collaboration", "LLM", "Data"],
-			href: "https://github.com/LukaCulina",
 		},
 	];
 
@@ -53,13 +57,11 @@ export function Projects() {
 		<Section id="projects" eyebrow={t("proj_eyebrow")} title={t("proj_title")}>
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 				{projects.map((p) => (
-					<a
+					<div
 						key={p.name}
-						href={p.href}
-						target="_blank"
-						rel="noreferrer"
-						className="group relative p-6 rounded-2xl border border-border bg-card/50 hover:bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-elegant overflow-hidden"
+						className="group relative p-6 rounded-2xl border border-border bg-card/50 hover:bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-elegant overflow-hidden flex flex-col"
 					>
+						{/* Hover efekt pozadine (ostaje isti) */}
 						<div
 							className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
 							style={{
@@ -68,22 +70,51 @@ export function Projects() {
 							}}
 							aria-hidden
 						/>
-						<div className="relative">
+
+						<div className="relative flex-1 flex flex-col">
 							<div className="flex items-start justify-between mb-3">
-								<h3 className="font-display text-lg font-semibold group-hover:text-gradient transition-colors">
+								{/* Ako ima live link, naslov vodi na live, inače na github */}
+								<a
+									href={p.liveUrl || p.githubUrl}
+									target="_blank"
+									rel="noreferrer"
+									className="font-display text-lg font-semibold group-hover:text-primary transition-colors"
+								>
 									{p.name}
-								</h3>
-								<div className="flex items-center gap-2 text-muted-foreground">
-									<Github size={16} />
-									<ExternalLink
-										size={14}
-										className="opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all"
-									/>
+								</a>
+
+								{/* Ikonice gore desno */}
+								<div className="flex items-center gap-3 text-muted-foreground">
+									{/* GitHub Link */}
+									<a
+										href={p.githubUrl}
+										target="_blank"
+										rel="noreferrer"
+										className="hover:text-primary transition-colors z-10"
+										aria-label="GitHub Repository"
+									>
+										<Github size={18} />
+									</a>
+
+									{/* External Link (Prikazuje se SAMO ako postoji liveUrl) */}
+									{p.liveUrl && (
+										<a
+											href={p.liveUrl}
+											target="_blank"
+											rel="noreferrer"
+											className="hover:text-primary transition-colors z-10"
+											aria-label="Live Demo"
+										>
+											<ExternalLink size={18} />
+										</a>
+									)}
 								</div>
 							</div>
-							<p className="text-sm text-muted-foreground leading-relaxed mb-4">
+
+							<p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
 								{t(p.descKey)}
 							</p>
+
 							<div className="flex flex-wrap gap-1.5">
 								{p.tags.map((tag) => (
 									<span
@@ -95,7 +126,7 @@ export function Projects() {
 								))}
 							</div>
 						</div>
-					</a>
+					</div>
 				))}
 			</div>
 		</Section>
