@@ -13,6 +13,7 @@ export function Navbar() {
 		{ id: "experience", label: t("nav_experience") },
 		{ id: "projects", label: t("nav_projects") },
 		{ id: "future", label: t("nav_future") },
+		{ id: "programs", label: t("nav_programs") },
 		{ id: "education", label: t("nav_education") },
 		{ id: "contact", label: t("nav_contact") },
 	];
@@ -53,6 +54,7 @@ export function Navbar() {
 				</ul>
 				<div className="flex items-center gap-2">
 					<button
+						type="button"
 						onClick={toggleLang}
 						aria-label="Toggle language"
 						className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-card/50 hover:bg-card text-xs font-medium transition-colors"
@@ -61,6 +63,7 @@ export function Navbar() {
 						{lang.toUpperCase()}
 					</button>
 					<button
+						type="button"
 						onClick={toggleTheme}
 						aria-label="Toggle theme"
 						className="p-2 rounded-full border border-border bg-card/50 hover:bg-card transition-colors"
@@ -68,6 +71,7 @@ export function Navbar() {
 						{theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
 					</button>
 					<button
+						type="button"
 						aria-label="Menu"
 						onClick={() => setOpen((v) => !v)}
 						className="lg:hidden p-2 rounded-md border border-border text-foreground"

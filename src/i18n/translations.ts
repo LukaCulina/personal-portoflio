@@ -6,6 +6,7 @@ const en = {
 	nav_experience: "Experience",
 	nav_projects: "Projects",
 	nav_future: "Future",
+	nav_programs: "Programs",
 	nav_education: "Education",
 	nav_contact: "Contact",
 
@@ -69,7 +70,14 @@ const en = {
 		"Personal finance app with expense visualisation, budgets, categories and monthly reports. Focused on clean UX and real-time insight into spending.",
 	future_more_title: "More to come…",
 	future_more_desc: "Always open to new ideas and collaborations.",
-
+	programs_eyebrow: "Extracurriculars",
+	programs_title: "Programs & Competitions",
+	prog_sofa_title: "Sofascore Frontend Academy",
+	prog_sofa_desc:
+		"Real-world Agile/Scrum experience. Developed frontend features using React and TypeScript through structured sprints and code reviews.",
+	prog_incubator_title: "Digital Innovation Incubator",
+	prog_incubator_desc:
+		"Competition answering 'How to bring Jamnica to youth'. Developed a digital solution and consumer experience, presented via a Figma prototype.",
 	edu_eyebrow: "Education",
 	edu_title: "Academic journey",
 	edu_master_title: "Master of Engineering in Information Technology",
@@ -98,6 +106,7 @@ const hr: Record<keyof typeof en, string> = {
 	nav_experience: "Iskustvo",
 	nav_projects: "Projekti",
 	nav_future: "Buduće",
+	nav_programs: "Programi",
 	nav_education: "Edukacija",
 	nav_contact: "Kontakt",
 	// Hero
@@ -161,6 +170,15 @@ const hr: Record<keyof typeof en, string> = {
 		"Aplikacija za praćenje osobnih financija s vizualizacijom troškova, budžetima, kategorijama i mjesečnim izvještajima. Cilj je čist UX i jasan uvid u potrošnju u realnom vremenu.",
 	future_more_title: "Više dolazi…",
 	future_more_desc: "Uvijek otvoren za nove ideje i suradnje.",
+	//Programs
+	programs_eyebrow: "Dodatna usavršavanja",
+	programs_title: "Programi i natjecanja",
+	prog_sofa_title: "Sofascore Frontend Academy",
+	prog_sofa_desc:
+		"Rad u stvarnom Agile/Scrum okruženju. Razvoj frontend funkcionalnosti pomoću Reacta i TypeScripta kroz sprinteve i code review.",
+	prog_incubator_title: "Digitalni inovacijski inkubator",
+	prog_incubator_desc:
+		"Natjecanje s temom 'Kako približiti Jamnicu mladima'. Razvoj idejnog rješenja i potrošačkog iskustva, prezentirano kroz Figma prototip.",
 	// Education
 	edu_eyebrow: "Edukacija",
 	edu_title: "Akademski put",

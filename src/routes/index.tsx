@@ -7,6 +7,7 @@ import { Footer } from "@/components/portfolio/Footer";
 import { FutureProjects } from "@/components/portfolio/FutureProjects";
 import { Hero } from "@/components/portfolio/Hero";
 import { Navbar } from "@/components/portfolio/Navbar";
+import { Programs } from "@/components/portfolio/Programs";
 import { Projects } from "@/components/portfolio/Projects";
 import { Skills } from "@/components/portfolio/Skills";
 import { AppProvider } from "@/contexts/AppContext";
@@ -42,6 +43,7 @@ function Index() {
 				<Experience />
 				<Projects />
 				<FutureProjects />
+				<Programs />
 				<Education />
 				<Contact />
 				<Footer />
