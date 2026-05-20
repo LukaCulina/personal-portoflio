@@ -14,7 +14,7 @@ export function Section({
 }) {
 	const ref = useReveal<HTMLDivElement>();
 	return (
-		<section id={id} className="py-24 px-6">
+		<section id={id} className="py-10 sm:py-12 lg:py-14 px-6">
 			<div ref={ref} className="reveal max-w-6xl mx-auto">
 				<div className="mb-12">
 					{eyebrow && (
