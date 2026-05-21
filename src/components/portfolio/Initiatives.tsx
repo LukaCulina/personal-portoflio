@@ -3,10 +3,10 @@ import { useApp } from "@/contexts/AppContext";
 import type { TranslationKey } from "@/i18n/translations";
 import { Section } from "./Section";
 
-export function Programs() {
+export function Initiatives() {
 	const { t } = useApp();
 
-	const programs: {
+	const initiatives: {
 		name: string | TranslationKey;
 		descKey: TranslationKey;
 		icon: typeof Code2;
@@ -36,12 +36,12 @@ export function Programs() {
 
 	return (
 		<Section
-			id="programs"
-			eyebrow={t("programs_eyebrow")}
-			title={t("programs_title")}
+			id="initiatives"
+			eyebrow={t("initiatives_eyebrow")}
+			title={t("initiatives_title")}
 		>
 			<div className="grid md:grid-cols-3 gap-5">
-				{programs.map((p) => {
+				{initiatives.map((p) => {
 					const Icon = p.icon;
 					const title =
 						p.name === "Tech4Society" ? p.name : t(p.name as TranslationKey);

@@ -13,7 +13,7 @@ export function Navbar() {
 		{ id: "experience", label: t("nav_experience") },
 		{ id: "projects", label: t("nav_projects") },
 		{ id: "future", label: t("nav_future") },
-		{ id: "programs", label: t("nav_programs") },
+		{ id: "initiatives", label: t("nav_initiatives") },
 		{ id: "education", label: t("nav_education") },
 		{ id: "contact", label: t("nav_contact") },
 	];

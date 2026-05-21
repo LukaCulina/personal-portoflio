@@ -10,18 +10,22 @@ export function Skills() {
 			{
 				icon: Code2,
 				key: "skills_frontend",
-				items: ["JavaScript", "React", "HTML", "CSS"],
+				items: ["React", "TypeScript", "JavaScript", "HTML & CSS"],
 			},
 			{
 				icon: Database,
 				key: "skills_backend",
 				items: ["Java", "Spring Boot", "JavaFX", "SQL"],
 			},
-			{ icon: Palette, key: "skills_design", items: ["Figma", "Canva"] },
+			{
+				icon: Palette,
+				key: "skills_design",
+				items: ["Figma", "UI / UX Design", "Canva"],
+			},
 			{
 				icon: FileText,
 				key: "skills_tools",
-				items: ["MS Office", "Git", "CMS"],
+				items: ["Git & GitHub", "Agile / Scrum", "REST APIs"],
 			},
 		];
 
