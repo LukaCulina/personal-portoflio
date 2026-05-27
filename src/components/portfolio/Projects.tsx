@@ -13,19 +13,20 @@ export function Projects() {
 		liveUrl?: string;
 	}[] = [
 		{
+			name: "FilmStar",
+			descKey: "proj_film_desc",
+			tags: ["React", "API"],
+			githubUrl: "https://github.com/LukaCulina/FilmStar",
+			liveUrl: "https://film-star.vercel.app/",
+		},
+		{
 			name: "TrekTrip",
 			descKey: "proj_trek_desc",
 			tags: ["React", "Spring Boot", "REST"],
 			githubUrl: "https://github.com/LukaCulina/TrekTrip",
 			liveUrl: "https://trek-trip.vercel.app/",
 		},
-		{
-			name: "FilmStar",
-			descKey: "proj_film_desc",
-			tags: ["React", "API"],
-			githubUrl: "https://github.com/LukaCulina/FilmStar",
-			liveUrl: "https://lukaculina.github.io/FilmStar/",
-		},
+		
 		{
 			name: "Terraforming Mars",
 			descKey: "proj_tm_desc",
