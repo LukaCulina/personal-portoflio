@@ -14,12 +14,6 @@ export function Initiatives() {
 		link?: string;
 	}[] = [
 		{
-			name: "prog_sofa_title",
-			descKey: "prog_sofa_desc",
-			icon: Code2,
-			tags: ["React", "TypeScript", "Scrum / Agile"],
-		},
-		{
 			name: "prog_incubator_title",
 			descKey: "prog_incubator_desc",
 			icon: Lightbulb,
