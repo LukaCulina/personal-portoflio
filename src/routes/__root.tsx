@@ -118,6 +118,16 @@ function RootShell({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
 			<head>
+				<script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            const t = localStorage.getItem('theme') ||
+                                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                            document.documentElement.classList.add(t);
+                            document.documentElement.setAttribute('data-theme', t);
+                        `,
+                    }}
+                />
 				<HeadContent />
 			</head>
 			<body>

@@ -38,6 +38,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
 			const storedTheme = localStorage.getItem("theme");
 			if (storedTheme === "dark" || storedTheme === "light")
 				return storedTheme as Theme;
+			
+			return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
 		}
 		return "dark";
 	});
